@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="label">Welcome</h2>
+        <p id="successMessage"></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var message = localStorage.getItem("loginSuccess");
+            if (message) {
+                document.getElementById("successMessage").textContent = message;
+                localStorage.removeItem("loginSuccess"); // Clear message after displaying
+            } else {
+                document.getElementById("successMessage").textContent = "You are not authorized!";
+            }
+        });
+    </script>
+</body>
+</html>

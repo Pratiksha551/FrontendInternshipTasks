@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Styling and Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="label">User Login</h2>
+        <form class="login_form" method="post" name="form" onsubmit="return validated()">
+            <div class="font">Email or Phone</div>
+            <input type="text" name="Email" id="email">
+            <div id="email_error">Please fill up your Email or Phone</div>
+
+            <div class="font font2">Password</div>
+            <input type="password" name="Password" id="password">
+            <div id="pass_error">Please fill up your Password</div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
